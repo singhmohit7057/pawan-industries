@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function Icon({ name, size = 24, className }: Props) {
-  const LucideIcon = (icons as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[name];
+  const LucideIcon = (icons as unknown as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[name];
   if (!LucideIcon) return null;
   return <LucideIcon size={size} className={className} />;
 }

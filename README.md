@@ -1,32 +1,52 @@
-# React + TypeScript + Vite
+# Pawan Industries
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Corporate website for **Pawan Industries** — an industrial engineering and fabrication company based in Kalol, Gujarat, India with 35+ years of experience.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + TypeScript
+- Vite 8
+- Tailwind CSS v4
+- React Router
+- Lucide React (icons)
+- Web3Forms (contact form)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Dev server runs on `http://localhost:5177`.
+
+## Build
+
+```bash
+npm run build
+```
+
+The `prebuild` script automatically converts client logos in `public/client/` to optimized WebP format in `public/clients/`.
+
+## Environment Variables
+
+Create a `.env` file:
+
+```
+VITE_WEB3FORMS_KEY=your_web3forms_access_key
+```
+
+## Deployment
+
+Configured for Vercel with SPA rewrites (`vercel.json`).
+
+## Pages
+
+- Home
+- About
+- Services
+- Industries
+- Infrastructure
+- Projects
+- Clients
+- Contact

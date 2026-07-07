@@ -1,4 +1,3 @@
-import SectionHeading from '../components/SectionHeading';
 import { clients } from '../data/clients';
 
 export default function Clients() {

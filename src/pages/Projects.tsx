@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import SectionHeading from '../components/SectionHeading';
 import { projects, projectCategories } from '../data/projects';
 import type { Project } from '../types';
 

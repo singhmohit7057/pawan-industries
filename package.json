@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node src/script/convert-logos.js",
+    "prebuild": "node src/script/convert-logos.cjs",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview"

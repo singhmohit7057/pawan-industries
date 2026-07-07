@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import SectionHeading from '../components/SectionHeading';
 import Icon from '../components/Icon';
 import { services } from '../data/services';
 

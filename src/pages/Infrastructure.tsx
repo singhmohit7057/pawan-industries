@@ -1,4 +1,3 @@
-import SectionHeading from '../components/SectionHeading';
 import { fabricationShop, machiningShop } from '../data/infrastructure';
 import { Wrench, Cog } from 'lucide-react';
 
