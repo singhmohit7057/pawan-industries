@@ -8,7 +8,7 @@ export const projects: Project[] = [
     industry: 'Ceramic Industry',
     description:
       'Custom-designed high speed blunger for ceramic slurry preparation with optimized blade geometry.',
-    image: 'https://images.unsplash.com/photo-1616400619175-5beda3a17896?w=600&q=80',
+    image: '/industries/HIGH SPEED BLUNGER.jpg',
   },
   {
     id: '2',
@@ -17,7 +17,7 @@ export const projects: Project[] = [
     industry: 'Ceramic Industry',
     description:
       'Hydro-pressure testing machine for high-voltage ceramic insulators with automated test cycles.',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80',
+    image: '/industries/INSULATOR TESTING MACHINE 1.jpg',
   },
   {
     id: '3',
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     industry: 'Ceramic Industry',
     description:
       'Heavy-duty de-airing extruder for ceramic body preparation with vacuum system integration.',
-    image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80',
+    image: '/industries/DE - AIRING EXTRUDER OR PUG MILL _1.jpg',
   },
   {
     id: '4',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     industry: 'Glass Industry',
     description:
       'Complete stainless steel ducting system for glass melting furnace with custom Y-joints and elbows.',
-    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80',
+    image: '/industries/Glass Plant Projects 1.jpg',
   },
   {
     id: '5',
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     industry: 'Glass Industry',
     description:
       'Multi-port burner assembly for glass furnace with precision-machined nozzles and mounting brackets.',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80',
+    image: '/industries/Glass Plant Projects 2.jpg',
   },
   {
     id: '6',
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     industry: 'Railway Industry',
     description:
       'Heavy-duty welding positioner for railway coach underframe assembly with motorized rotation.',
-    image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&q=80',
+    image: '/industries/Railway Projects 1.jpg',
   },
   {
     id: '7',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     industry: 'Railway Industry',
     description:
       'Precision fixture for metro coach bogie assembly with adjustable clamping and alignment features.',
-    image: 'https://images.unsplash.com/photo-1532105956626-9569c03602f6?w=600&q=80',
+    image: '/industries/Railway Projects 2.jpg',
   },
   {
     id: '8',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     industry: 'Railway Industry',
     description:
       'Scissor lift table system for railway coach maintenance and assembly operations.',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80',
+    image: '/industries/Railway Projects 3.jpg',
   },
   {
     id: '9',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     industry: 'Chemical Industry',
     description:
       'ASME-standard pressure vessel for chemical processing with multiple nozzle connections.',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80',
+    image: '/industries/10.jpg',
   },
   {
     id: '10',
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     industry: 'Chemical Industry',
     description:
       'Large-capacity horizontal storage tank for chemical plant with internal baffles and heating coils.',
-    image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&q=80',
+    image: '/industries/Cement-Chemical Projects 2.jpg',
   },
   {
     id: '11',
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     industry: 'Industrial Infrastructure',
     description:
       'Multi-level industrial platform with gratings, handrails, and access staircases for plant operations.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    image: '/industries/Structure Projects 1.jpg',
   },
   {
     id: '12',
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     industry: 'Industrial Infrastructure',
     description:
       'Heavy structural steel framework for industrial building with crane girder support.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80',
+    image: '/industries/Structure Projects 2.jpg',
   },
 ];
 

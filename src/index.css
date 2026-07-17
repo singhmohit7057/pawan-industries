@@ -4,14 +4,25 @@
   --color-primary: #1565C0;
   --color-primary-dark: #0D47A1;
   --color-primary-light: #1E88E5;
-  --color-secondary: #1E293B;
+  --color-secondary: #4A4A4A;
+  --color-secondary-dark: #2D2D2D;
   --color-accent: #F1F5F9;
   --color-surface: #FFFFFF;
-  --color-muted: #64748B;
+  --color-muted: #6B7280;
   --color-border: #E2E8F0;
 
   --font-heading: 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
 
 html {

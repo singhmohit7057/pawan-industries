@@ -1,14 +1,24 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Icon from '../components/Icon';
+import SectionHeading from '../components/SectionHeading';
 import { industries } from '../data/industries';
+
+const industryImages: Record<string, string> = {
+  ceramic: '/industries/HIGH SPEED BLUNGER.jpg',
+  glass: '/industries/Glass Plant Projects 1.jpg',
+  railway: '/industries/Railway Projects 1.jpg',
+  chemical: '/industries/10.jpg',
+  cement: '/industries/Cement-Chemical Projects 3.jpg',
+  infrastructure: '/industries/Structure Projects 1.jpg',
+};
 
 export default function Industries() {
   return (
     <>
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl text-center sm:text-left mx-auto sm:mx-0">
+          <div className="max-w-3xl text-center mx-auto">
             <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
               Industries We Serve
             </p>
@@ -25,33 +35,47 @@ export default function Industries() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <SectionHeading
+            title="Our Industry Sectors"
+            subtitle="Specialized solutions tailored to each industry's unique requirements"
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {industries.map((ind) => (
-              <div
+              <Link
                 key={ind.id}
-                className="bg-white border border-border rounded-xl p-8 hover:shadow-md hover:border-primary/30 transition-all text-center md:text-left"
+                to={`/industries/${ind.id}`}
+                className="bg-white border border-border rounded-xl overflow-hidden hover:shadow-md hover:border-primary/30 transition-all flex flex-col"
               >
-                <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-5 mx-auto md:mx-0">
-                  <Icon name={ind.icon} size={28} className="text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">{ind.title}</h3>
-                <p className="text-muted text-sm leading-relaxed mb-4">{ind.description}</p>
-                <div>
-                  <p className="text-xs font-semibold text-secondary uppercase tracking-wide mb-2">
-                    Key Expertise
-                  </p>
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                    {ind.expertise.map((e) => (
-                      <span
-                        key={e}
-                        className="text-xs bg-blue-50 text-primary px-2.5 py-1 rounded-full"
-                      >
-                        {e}
-                      </span>
-                    ))}
+                <img
+                  src={industryImages[ind.id]}
+                  alt={ind.title}
+                  className="w-full h-40 object-cover"
+                />
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                      <Icon name={ind.icon} size={20} className="text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-secondary">{ind.title}</h3>
                   </div>
+                  <p className="text-xs text-muted leading-relaxed mb-3">{ind.description}</p>
+                  <div className="mb-3">
+                    <div className="flex flex-wrap gap-1.5">
+                      {ind.expertise.map((e) => (
+                        <span
+                          key={e}
+                          className="text-xs bg-blue-50 text-primary px-2 py-0.5 rounded-full"
+                        >
+                          {e}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <span className="inline-flex items-center gap-1 text-sm text-primary font-semibold mt-auto">
+                    Learn More <ArrowRight size={14} />
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

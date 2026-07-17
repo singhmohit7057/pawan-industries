@@ -22,31 +22,31 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center sm:text-left">
-              <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-8 sm:py-10 lg:py-14 lg:min-h-[calc(100vh-5rem)] lg:flex lg:items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div className="text-center">
+              <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-2">
                 Trusted Since 1989
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+              <h1 className="text-[34px] sm:text-[42px] lg:text-[50px] font-bold text-secondary leading-tight">
                 Engineering Excellence Built Over{' '}
                 <span className="text-primary">35+ Years</span>
               </h1>
-              <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl mx-auto sm:mx-0">
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted leading-relaxed max-w-xl mx-auto">
                 Delivering custom engineering, fabrication, machining, and industrial project
                 solutions across multiple industries.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4 justify-center sm:justify-start">
+              <div className="mt-4 sm:mt-6 flex flex-wrap gap-3 sm:gap-4 justify-center">
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base"
                 >
                   Explore Services <ArrowRight size={18} />
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base"
                 >
                   Contact Us
                 </Link>
@@ -54,26 +54,26 @@ export default function Home() {
             </div>
 
             <div className="hidden lg:block">
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-border">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-blue-50 rounded-xl p-6 text-center">
-                    <Wrench className="mx-auto text-primary mb-2" size={32} />
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-border">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-blue-50 rounded-xl p-5 text-center">
+                    <Wrench className="mx-auto text-primary mb-2" size={28} />
                     <p className="text-sm font-medium text-secondary">Design Engineering</p>
                   </div>
-                  <div className="bg-blue-50 rounded-xl p-6 text-center">
-                    <Building className="mx-auto text-primary mb-2" size={32} />
+                  <div className="bg-blue-50 rounded-xl p-5 text-center">
+                    <Building className="mx-auto text-primary mb-2" size={28} />
                     <p className="text-sm font-medium text-secondary">Heavy Fabrication</p>
                   </div>
-                  <div className="bg-blue-50 rounded-xl p-6 text-center">
-                    <Target className="mx-auto text-primary mb-2" size={32} />
+                  <div className="bg-blue-50 rounded-xl p-5 text-center">
+                    <Target className="mx-auto text-primary mb-2" size={28} />
                     <p className="text-sm font-medium text-secondary">Precision Machining</p>
                   </div>
-                  <div className="bg-blue-50 rounded-xl p-6 text-center">
-                    <Award className="mx-auto text-primary mb-2" size={32} />
+                  <div className="bg-blue-50 rounded-xl p-5 text-center">
+                    <Award className="mx-auto text-primary mb-2" size={28} />
                     <p className="text-sm font-medium text-secondary">Project Execution</p>
                   </div>
                 </div>
-                <div className="mt-6 bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
+                <div className="mt-4 bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
                   <p className="text-primary font-semibold text-sm">
                     "From Design to Execution — Your One-Stop Engineering Solution"
                   </p>
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="mt-6 sm:mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {[
               { icon: Calendar, value: '35+', label: 'Years Experience' },
               { icon: FolderKanban, value: '500+', label: 'Projects Delivered' },
@@ -92,11 +92,11 @@ export default function Home() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white rounded-xl p-6 text-center shadow-sm border border-border"
+                className="bg-white rounded-xl p-4 text-center shadow-sm border border-border"
               >
-                <stat.icon className="mx-auto text-primary mb-3" size={28} />
-                <p className="text-3xl font-bold text-secondary">{stat.value}</p>
-                <p className="text-sm text-muted mt-1">{stat.label}</p>
+                <stat.icon className="mx-auto text-primary mb-2" size={24} />
+                <p className="text-2xl font-bold text-secondary">{stat.value}</p>
+                <p className="text-xs text-muted mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -104,27 +104,29 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 lg:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <SectionHeading
             title="Our Services"
             subtitle="Comprehensive engineering solutions from concept to completion"
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="bg-white border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/30 transition-all text-center sm:text-left"
+                className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all"
               >
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
-                  <Icon name={service.icon} size={24} className="text-primary" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                    <Icon name={service.icon} size={20} className="text-primary" />
+                  </div>
+                  <h3 className="text-base font-semibold text-secondary">{service.title}</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-secondary mb-2">{service.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{service.description}</p>
+                <p className="text-xs text-muted leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-6">
             <Link
               to="/services"
               className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
@@ -136,13 +138,13 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-accent">
+      <section className="py-10 lg:py-12 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Why Choose Us"
             subtitle="Trusted by leading companies across industries"
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { icon: Calendar, title: '35+ Years Experience', desc: 'Decades of proven expertise in industrial engineering and fabrication.' },
               { icon: Layers, title: 'Design-to-Execution', desc: 'Complete lifecycle management from concept design to final delivery.' },
@@ -151,10 +153,14 @@ export default function Home() {
               { icon: Shield, title: 'Quality Commitment', desc: 'Rigorous quality control with continuous improvement philosophy.' },
               { icon: Clock, title: 'On-time Delivery', desc: 'Proven track record of meeting project deadlines consistently.' },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-6 border border-border text-center sm:text-left">
-                <item.icon className="text-primary mb-4 mx-auto sm:mx-0" size={28} />
-                <h3 className="font-semibold text-secondary mb-2">{item.title}</h3>
-                <p className="text-sm text-muted">{item.desc}</p>
+              <div key={item.title} className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                    <item.icon className="text-primary" size={20} />
+                  </div>
+                  <h3 className="text-base font-semibold text-secondary">{item.title}</h3>
+                </div>
+                <p className="text-xs text-muted leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -162,31 +168,42 @@ export default function Home() {
       </section>
 
       {/* Industries Preview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 lg:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <SectionHeading
             title="Industries We Serve"
             subtitle="Multi-industry expertise delivering specialized solutions"
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {industries.map((ind) => (
-              <div
+              <Link
                 key={ind.id}
-                className="border border-border rounded-xl p-6 hover:shadow-md hover:border-primary/30 transition-all text-center sm:text-left"
+                to={`/industries/${ind.id}`}
+                className="border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all"
               >
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
-                  <Icon name={ind.icon} size={24} className="text-primary" />
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                    <Icon name={ind.icon} size={20} className="text-primary" />
+                  </div>
+                  <h3 className="text-base font-semibold text-secondary">{ind.title}</h3>
                 </div>
-                <h3 className="font-semibold text-secondary mb-2">{ind.title}</h3>
-                <p className="text-sm text-muted">{ind.description}</p>
-              </div>
+                <p className="text-xs text-muted">{ind.description}</p>
+              </Link>
             ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link
+              to="/industries"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+            >
+              View All Industries <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Clients */}
-      <section className="py-20 bg-accent">
+      <section className="py-10 lg:py-12 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Trusted By Industry Leaders"
@@ -216,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary-dark text-white">
+      <section className="py-10 lg:py-12 bg-primary-dark text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">Let's Engineer Your Next Project</h2>
           <p className="mt-4 text-blue-100 text-lg">

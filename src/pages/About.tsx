@@ -9,7 +9,7 @@ export default function About() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl text-center sm:text-left mx-auto sm:mx-0">
+          <div className="max-w-3xl text-center mx-auto">
             <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
               About Us
             </p>
@@ -41,9 +41,8 @@ export default function About() {
               <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
                 Our Founder
               </p>
-              <h2 className="text-3xl font-bold text-secondary mb-4">Mr. B.N. Giri</h2>
               <p className="text-muted leading-relaxed">
-                Mr. B.N. Giri, the founder of the company, brings more than 25 years of experience
+                The founder of the company brings more than 25+ years of experience
                 in the engineering and fabrication industry. It is because of his hard work,
                 dedication, and capability that Pawan Industries came into existence and has grown
                 into a trusted name serving India's leading industrial companies for over 35 years.
@@ -56,28 +55,44 @@ export default function About() {
       {/* Mission, Vision, Quality */}
       <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white border border-border rounded-xl p-8 text-center md:text-left">
-              <Target className="text-primary mb-4 mx-auto md:mx-0" size={32} />
-              <h3 className="text-xl font-bold text-secondary mb-3">Our Mission</h3>
-              <p className="text-muted text-sm leading-relaxed">
+          <SectionHeading
+            title="Our Core Values"
+            subtitle="The principles that guide everything we do"
+          />
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all text-center md:text-left">
+              <div className="flex items-center gap-3 mb-2 justify-center md:justify-start">
+                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                  <Target className="text-primary" size={20} />
+                </div>
+                <h3 className="text-base font-semibold text-secondary">Our Mission</h3>
+              </div>
+              <p className="text-xs text-muted leading-relaxed">
                 To enhance customer value proposition by fostering loyalty, driving financial
                 well-being, delivering superior quality, ensuring timely execution, and thereby
                 achieving unparalleled customer satisfaction.
               </p>
             </div>
-            <div className="bg-white border border-border rounded-xl p-8 text-center md:text-left">
-              <Eye className="text-primary mb-4 mx-auto md:mx-0" size={32} />
-              <h3 className="text-xl font-bold text-secondary mb-3">Our Vision</h3>
-              <p className="text-muted text-sm leading-relaxed">
+            <div className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all text-center md:text-left">
+              <div className="flex items-center gap-3 mb-2 justify-center md:justify-start">
+                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                  <Eye className="text-primary" size={20} />
+                </div>
+                <h3 className="text-base font-semibold text-secondary">Our Vision</h3>
+              </div>
+              <p className="text-xs text-muted leading-relaxed">
                 To be a globally recognized leader in customized engineering solutions, delivering
                 exceptional services with focus on precision and performance.
               </p>
             </div>
-            <div className="bg-white border border-border rounded-xl p-8 text-center md:text-left">
-              <Award className="text-primary mb-4 mx-auto md:mx-0" size={32} />
-              <h3 className="text-xl font-bold text-secondary mb-3">Quality Policy</h3>
-              <p className="text-muted text-sm leading-relaxed">
+            <div className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all text-center md:text-left">
+              <div className="flex items-center gap-3 mb-2 justify-center md:justify-start">
+                <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                  <Award className="text-primary" size={20} />
+                </div>
+                <h3 className="text-base font-semibold text-secondary">Quality Policy</h3>
+              </div>
+              <p className="text-xs text-muted leading-relaxed">
                 Adherence to the philosophy of continuous improvement to deliver quality products,
                 timely delivery and ensure customer satisfaction.
               </p>
@@ -86,8 +101,87 @@ export default function About() {
         </div>
       </section>
 
-      {/* Highlights */}
+      {/* Timeline */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Journey of Excellence"
+            subtitle="Key milestones in our 35+ year journey"
+          />
+          <div className="overflow-x-auto pb-4">
+            <div className="relative min-w-[700px] px-4">
+              {/* Top row - even items */}
+              <div className="flex justify-between h-20">
+                {timeline.map((item, i) => (
+                  <div key={item.year} className="flex flex-col items-center justify-end w-[100px]">
+                    {i % 2 === 0 ? (
+                      <div className="text-center">
+                        <span className="text-primary font-bold text-base">{item.year}</span>
+                        <p className="text-secondary font-medium text-xs mt-1">{item.title}</p>
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+              {/* Dots row */}
+              <div className="relative flex justify-between py-3">
+                <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary/20 -translate-y-1/2" />
+                {timeline.map((item) => (
+                  <div key={item.year} className="w-[100px] flex justify-center">
+                    <div className="w-4 h-4 bg-primary rounded-full border-2 border-blue-50 shadow-sm z-10" />
+                  </div>
+                ))}
+              </div>
+              {/* Bottom row - odd items */}
+              <div className="flex justify-between h-16">
+                {timeline.map((item, i) => (
+                  <div key={item.year} className="flex flex-col items-center justify-start w-[100px]">
+                    {i % 2 !== 0 ? (
+                      <div className="text-center">
+                        <span className="text-primary font-bold text-base">{item.year}</span>
+                        <p className="text-secondary font-medium text-xs mt-1">{item.title}</p>
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
       <section className="py-20 bg-accent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            title="Our Certifications"
+            subtitle="Recognized standards that ensure quality and reliability"
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'ISO 9001:2015', desc: 'Quality Management System certified, ensuring consistent quality in all processes.' },
+              { title: 'IBR Certified', desc: 'Indian Boiler Regulations certification for pressure vessel and boiler component manufacturing.' },
+              { title: 'MSME Registered', desc: 'Registered under Micro, Small and Medium Enterprises Development Act.' },
+              { title: 'Factory License', desc: 'Licensed manufacturing facility compliant with all statutory requirements.' },
+              { title: 'GST Registered', desc: 'Fully compliant with Goods and Services Tax regulations.' },
+              { title: 'SSI Registered', desc: 'Small Scale Industries registration for government project eligibility.' },
+            ].map((item) => (
+              <div key={item.title} className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all text-center sm:text-left">
+                <div className="flex items-center gap-3 mb-2 justify-center sm:justify-start">
+                  <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                    <Award className="text-primary" size={20} />
+                  </div>
+                  <h3 className="text-base font-semibold text-secondary">{item.title}</h3>
+                </div>
+                <p className="text-xs text-muted leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Highlights */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading title="What Sets Us Apart" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -102,38 +196,6 @@ export default function About() {
                 <p className="text-sm text-muted">{item.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            title="Journey of Excellence"
-            subtitle="Key milestones in our 35+ year journey"
-          />
-          <div className="max-w-3xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-0.5" />
-              {timeline.map((item, i) => (
-                <div
-                  key={item.year}
-                  className={`relative flex items-center mb-8 ${
-                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  <div className="hidden md:block md:w-1/2" />
-                  <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-primary rounded-full -translate-x-1.5 md:-translate-x-1.5 border-2 border-white shadow" />
-                  <div className={`ml-10 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
-                    <div className="bg-white border border-border rounded-lg p-4 shadow-sm">
-                      <span className="text-primary font-bold text-lg">{item.year}</span>
-                      <p className="text-secondary font-medium text-sm mt-1">{item.title}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

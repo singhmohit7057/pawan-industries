@@ -7,7 +7,7 @@ export default function Contact() {
     <>
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-8 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl text-center sm:text-left mx-auto sm:mx-0">
+          <div className="max-w-3xl text-center mx-auto">
             <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-2">
               Contact Us
             </p>
