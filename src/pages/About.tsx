@@ -7,20 +7,22 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-primary-dark to-primary py-6 sm:py-10 lg:py-10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-72 h-72 bg-white rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-56 h-56 bg-primary-light rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl text-center mx-auto">
-            <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
+            <p className="text-blue-200 font-semibold text-sm tracking-wide uppercase mb-3">
               About Us
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-secondary">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
               35+ Years of Engineering Excellence
             </h1>
-            <p className="mt-6 text-lg text-muted leading-relaxed">
+            <p className="mt-3 text-blue-100 sm:text-lg leading-relaxed">
               Founded in 1989, Pawan Industries has evolved from a machining-focused business into a
-              complete engineering and industrial solutions provider. With a state-of-the-art 2,500
-              sq.m. facility and a team of experienced engineers and skilled technicians, we deliver
-              precision-engineered solutions that meet the unique needs of our clients.
+              complete engineering and industrial solutions provider.
             </p>
           </div>
         </div>

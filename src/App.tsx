@@ -16,7 +16,7 @@ export default function App() {
   return (
     <BrowserRouter>
       {/* Background rotating gears */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 hidden lg:block">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-10 hidden lg:block">
         <img
           src="/Gear.png"
           alt=""

@@ -22,15 +22,19 @@ export default function IndustryDetail() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/industries" className="inline-flex items-center gap-1 text-sm text-primary hover:underline mb-6">
+      <section className="bg-gradient-to-br from-primary-dark to-primary py-6 sm:py-10 lg:py-10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-72 h-72 bg-white rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-56 h-56 bg-primary-light rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <Link to="/industries" className="inline-flex items-center gap-1 text-sm text-blue-200 hover:text-white mb-6">
             <ArrowLeft size={16} /> Back to Industries
           </Link>
           <div className="max-w-3xl text-center mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-bold text-secondary">{industry.title}</h1>
-            <p className="mt-4 text-lg text-primary font-medium">{industry.subtitle}</p>
-            <p className="mt-4 text-muted leading-relaxed">{industry.description}</p>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">{industry.title}</h1>
+            <p className="mt-3 text-lg text-blue-200 font-medium">{industry.subtitle}</p>
+            <p className="mt-3 text-blue-100 leading-relaxed">{industry.description}</p>
           </div>
         </div>
       </section>

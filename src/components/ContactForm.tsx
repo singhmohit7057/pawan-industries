@@ -73,7 +73,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-4">
       {status === 'error' && (
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3">
           <AlertCircle className="text-red-600 shrink-0" size={20} />
@@ -81,7 +81,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-secondary mb-1.5">
             Name <span className="text-red-500">*</span>
@@ -111,7 +111,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-secondary mb-1.5">
             Email <span className="text-red-500">*</span>
@@ -146,7 +146,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-secondary mb-1.5">Industry</label>
           <select
@@ -192,7 +192,7 @@ export default function ContactForm() {
           name="message"
           value={form.message}
           onChange={handleChange}
-          rows={5}
+          rows={6}
           className={`w-full px-4 py-2.5 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none ${
             errors.message ? 'border-red-400' : 'border-border'
           }`}
