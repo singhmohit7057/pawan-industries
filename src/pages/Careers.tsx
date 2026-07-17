@@ -43,7 +43,7 @@ export default function Careers() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-dark to-primary py-6 sm:py-10 lg:py-10 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary-dark to-primary h-[200px] sm:h-[240px] lg:h-[280px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-72 h-72 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-56 h-56 bg-primary-light rounded-full blur-3xl" />
