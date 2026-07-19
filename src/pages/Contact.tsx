@@ -6,18 +6,18 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-dark to-primary h-[200px] sm:h-[240px] lg:h-[280px] flex items-center relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary-dark to-primary h-[200px] sm:h-[220px] lg:h-[260px] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-72 h-72 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-56 h-56 bg-primary-light rounded-full blur-3xl" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl text-center mx-auto">
-            <p className="text-blue-200 font-semibold text-sm tracking-wide uppercase mb-3">
+            <p className="text-blue-200 font-semibold text-xs sm:text-sm tracking-wide uppercase mb-2">
               Contact Us
             </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">Get In Touch</h1>
-            <p className="mt-3 text-blue-100 sm:text-lg leading-relaxed">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">Get In Touch</h1>
+            <p className="mt-3 text-blue-100 text-sm sm:text-base leading-relaxed">
               Have a project in mind? Reach out and our engineering team will get back to you within 24 hours.
             </p>
           </div>

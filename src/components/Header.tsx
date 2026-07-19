@@ -18,11 +18,15 @@ export default function Header() {
   const location = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+    <header className="sticky top-0 z-50 bg-white shadow-sm overflow-visible">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="hidden lg:flex absolute top-0 left-8 bg-white border border-border border-t-0 rounded-b-xl shadow-lg px-5 py-3 items-center z-50" style={{ height: '60px' }}>
+          <img src="/LOGO.png" alt="Pawan Industries" className="h-12 w-auto" />
+        </div>
+        <div className="flex items-center justify-between h-14 lg:h-12">
           <Link to="/" className="flex items-center">
-            <img src="/LOGO.png" alt="Pawan Industries" className="h-16 lg:h-18 w-auto" />
+            <img src="/LOGO.png" alt="Pawan Industries" className="h-10 w-auto lg:hidden" />
+            <div className="hidden lg:block w-36" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

@@ -2,18 +2,15 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Calendar,
-  FolderKanban,
-  Users,
   Layers,
   Shield,
   Clock,
-  Wrench,
   Building,
-  Award,
   Target,
 } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import Icon from '../components/Icon';
+import CountUp from '../components/CountUp';
 import { services } from '../data/services';
 import { industries } from '../data/industries';
 import { clients } from '../data/clients';
@@ -22,83 +19,56 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-8 sm:py-10 lg:py-14 lg:min-h-[calc(100vh-5rem)] lg:flex lg:items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="text-center">
-              <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-2">
-                Trusted Since 1989
-              </p>
-              <h1 className="text-[34px] sm:text-[42px] lg:text-[50px] font-bold text-secondary leading-tight">
-                Engineering Excellence Built Over{' '}
-                <span className="text-primary">35+ Years</span>
-              </h1>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted leading-relaxed max-w-xl mx-auto">
-                Delivering custom engineering, fabrication, machining, and industrial project
-                solutions across multiple industries.
-              </p>
-              <div className="mt-4 sm:mt-6 flex flex-wrap gap-3 sm:gap-4 justify-center">
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base"
-                >
-                  Explore Services <ArrowRight size={18} />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
+      <section className="relative py-8 sm:py-10 lg:py-14 lg:min-h-[calc(100vh-3rem)] lg:flex lg:items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-blue-50" />
+        <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] rounded-full bg-primary/[0.03] blur-3xl" />
+        <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-3xl" />
 
-            <div className="hidden lg:block">
-              <div className="bg-white rounded-2xl shadow-lg p-6 border border-border">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-blue-50 rounded-xl p-5 text-center">
-                    <Wrench className="mx-auto text-primary mb-2" size={28} />
-                    <p className="text-sm font-medium text-secondary">Design Engineering</p>
-                  </div>
-                  <div className="bg-blue-50 rounded-xl p-5 text-center">
-                    <Building className="mx-auto text-primary mb-2" size={28} />
-                    <p className="text-sm font-medium text-secondary">Heavy Fabrication</p>
-                  </div>
-                  <div className="bg-blue-50 rounded-xl p-5 text-center">
-                    <Target className="mx-auto text-primary mb-2" size={28} />
-                    <p className="text-sm font-medium text-secondary">Precision Machining</p>
-                  </div>
-                  <div className="bg-blue-50 rounded-xl p-5 text-center">
-                    <Award className="mx-auto text-primary mb-2" size={28} />
-                    <p className="text-sm font-medium text-secondary">Project Execution</p>
-                  </div>
-                </div>
-                <div className="mt-4 bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
-                  <p className="text-primary font-semibold text-sm">
-                    "From Design to Execution — Your One-Stop Engineering Solution"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
+          <div className="max-w-2xl text-center mx-auto">
+            <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-3">
+              Trusted Since 1989
+            </p>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary leading-[1.1]">
+              Engineering Excellence Built Over{' '}
+              <span className="text-primary">35+ Years</span>
+            </h1>
+            <p className="mt-4 text-sm sm:text-base text-muted leading-relaxed">
+              Delivering custom engineering, fabrication, machining, and industrial project
+              solutions across multiple industries.
+            </p>
+
+            {/* Stats KPI bar */}
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto">
+              {[
+                { end: 35, suffix: '+', label: 'Years' },
+                { end: 500, suffix: '+', label: 'Projects' },
+                { end: 100, suffix: '+', label: 'Clients' },
+                { end: 6, suffix: '+', label: 'Industries' },
+              ].map((stat) => (
+                <div key={stat.label} className="border-l-2 border-primary/30 pl-3">
+                  <p className="text-2xl font-bold text-secondary">
+                    <CountUp end={stat.end} suffix={stat.suffix} />
                   </p>
+                  <p className="text-xs text-muted">{stat.label}</p>
                 </div>
-              </div>
+              ))}
             </div>
-          </div>
 
-          {/* Stats */}
-          <div className="mt-6 sm:mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-            {[
-              { icon: Calendar, value: '35+', label: 'Years Experience' },
-              { icon: FolderKanban, value: '500+', label: 'Projects Delivered' },
-              { icon: Users, value: '100+', label: 'Clients Served' },
-              { icon: Layers, value: '6+', label: 'Industries' },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white rounded-xl p-4 text-center shadow-sm border border-border"
+            <div className="mt-6 flex flex-wrap gap-3 sm:gap-4 justify-center">
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition-all text-sm sm:text-base"
               >
-                <stat.icon className="mx-auto text-primary mb-2" size={24} />
-                <p className="text-2xl font-bold text-secondary">{stat.value}</p>
-                <p className="text-xs text-muted mt-1">{stat.label}</p>
-              </div>
-            ))}
+                Explore Services <ArrowRight size={18} />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-6 py-3 rounded-full font-semibold transition-all text-sm sm:text-base"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>
